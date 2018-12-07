@@ -57,6 +57,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
     implementation 'com.arello-mobile:moxy:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
     //picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'

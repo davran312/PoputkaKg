@@ -8,8 +8,9 @@ import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import poputka.neobis.poputkakg.data.RetrofitRepository
+import poputka.neobis.poputkakg.utils.Const
+import poputka.neobis.poputkakg.utils.Const.REQUEST_TIME_MINUTE
 import poputka.neobis.poputkakg.utils.Preference
-import poputka.neobis.poputkakg.utils.Preference.REQUEST_TIME_MINUTE
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.IOException
@@ -23,10 +24,10 @@ class NetworkModule{
     @Provides
     internal fun provideRetrofit(client: OkHttpClient, gsonFactory: GsonConverterFactory): RetrofitRepository {
         return Retrofit.Builder()
-            .baseUrl(Preference.BASE_URL)
+            .baseUrl(Const.BASE_URL)
             .addConverterFactory(gsonFactory)
             .client(client).build()
-            .create(RetrofitRepository::class.java!!)
+            .create(RetrofitRepository::class.java)
     }
 
     @Singleton

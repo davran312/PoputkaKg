@@ -7,5 +7,10 @@ import poputka.neobis.poputkakg.utils.IProgressBar
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface LoginView :MvpView, IProgressBar {
+    fun onSucces(result:Void?)
+    fun onError(msg:String)
+    fun clearError()
+    fun onLoginError()
+    fun onPasswordError()
 
 }

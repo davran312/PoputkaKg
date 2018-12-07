@@ -7,4 +7,7 @@
     <string name="registration">Регистрация</string>
     <string name="number_code">Введите номер телефона (+996)</string>
     <string name="authorization">Авторизация</string>
+    <string name="loading">Загрузка...</string>
+    <string name="incorrectLogin">Неправильный логин</string>
+    <string name="incorrectPassword">Неверный пароль</string>
 </resources>

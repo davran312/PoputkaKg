@@ -22,5 +22,10 @@ public class AppModule {
     AndroidUtilities provideUtilities(){
         return new AndroidUtilities(mContext);
     }
+    @Singleton
+    @Provides
+    Preference providePreference(){
+        return new Preference(mContext);
+    }
 
 }

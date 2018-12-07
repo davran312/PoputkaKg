@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-android:orientation="vertical">
+        android:id="@+id/rootView"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 <android.support.constraint.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@ android:orientation="vertical">
                 app:layout_constraintEnd_toEndOf="parent"
                 android:src="@drawable/logo"
                 android:layout_width="@dimen/icon_size"
-                android:layout_height="@dimen/icon_size"/>
+                android:layout_height="@dimen/icon_size" tools:ignore="ContentDescription"/>
     <TextView
             android:padding="@dimen/padding_8"
             android:textColor="@color/colorPrimaryDark"
@@ -36,8 +37,7 @@ android:orientation="vertical">
             android:layout_marginLeft="@dimen/margin_horizontal"
             android:layout_marginRight="@dimen/margin_horizontal"
             android:hint="@string/number_code"
-            app:layout_constraintTop_toBottomOf="@id/iwLogo"
-            android:theme="@style/TextLabel">
+            app:layout_constraintTop_toBottomOf="@id/iwLogo">
     <android.support.design.widget.TextInputEditText
                 android:id="@+id/etLogin"
                 style="@style/loginEditText"
@@ -54,7 +54,6 @@ android:orientation="vertical">
             android:layout_marginRight="@dimen/margin_horizontal"
             android:hint="@string/password_hint"
             app:layout_constraintTop_toBottomOf="@id/mLoginLayout"
-            android:theme="@style/TextLabel"
             app:passwordToggleEnabled="true"
     >
         <android.support.design.widget.TextInputEditText
@@ -101,6 +100,7 @@ android:orientation="vertical">
                 android:text="@string/registration"
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
+                android:layout_marginBottom="32dp"
                 app:layout_constraintBottom_toBottomOf="parent"
         />
     </android.support.constraint.ConstraintLayout>
