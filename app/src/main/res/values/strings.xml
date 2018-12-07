@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PoputkaKg</string>
+    <string name="number_hint">+996</string>
+    <string name="password_hint">Пароль</string>
+    <string name="forget_password">Забыли Пароль ?</string>
+    <string name="enter">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="number_code">Введите номер телефона (+996)</string>
+    <string name="authorization">Авторизация</string>
+</resources>
